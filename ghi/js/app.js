@@ -20,6 +20,12 @@ window.addEventListener("DOMContentLoaded", async () => {
 
     if (!response.ok) {
       // Figure out what to do when the response is bad
+        const container = document.querySelector(".container");
+        container.innerHTML += `
+        <div class="alert alert-warning" role="alert">
+            Error calling to api
+        </div>
+        `
     } else {
       const data = await response.json();
       let i = 0;
@@ -53,5 +59,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
   } catch (e) {
     // Figure out what to do if an error is raised
+      console.log(e);
+
   }
 });
