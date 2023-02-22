@@ -1,4 +1,4 @@
-function createCard(name, description, pictureUrl) {
+function createCard(name, description, pictureUrl,starts,ends) {
     return `
         <div class="card shadow-lg d-grid mt-5">
             <img src="${pictureUrl}" class="card-img-top">
@@ -6,6 +6,7 @@ function createCard(name, description, pictureUrl) {
             <h5 class="card-title">${name}</h5>
             <p class="card-text text-justify">${description}</p>
             </div>
+            <div class="card-footer">${starts} - ${ends}</div>
         </div>
     `;
   }
@@ -34,7 +35,9 @@ function createCard(name, description, pictureUrl) {
                       const title = details.conference.name;
                       const description = details.conference.description;
                       const pictureUrl = details.conference.location.picture_url;
-                      const html = createCard(title, description, pictureUrl);
+                      const starts = new Date(details.conference.starts).toDateString();
+                      const ends = new Date(details.conference.ends).toDateString();
+                      const html = createCard(title, description, pictureUrl,starts,ends);
                       column.innerHTML += html;
               }
               if (i >= 3) {
