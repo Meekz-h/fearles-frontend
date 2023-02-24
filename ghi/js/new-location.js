@@ -7,7 +7,6 @@ window.addEventListener("DOMContentLoaded", async () => {
         const data = await response.json();
         const stateSelect = document.getElementById("state");
 
-        stateSelect.disabled = true;
 
         for (const state of data.states) {
             const option = document.createElement("option");
@@ -15,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async () => {
             option.innerHTML = state.name;
             stateSelect.appendChild(option);
         }
-        stateSelect.disabled = false;
+
     }
 
     const formTag = document.getElementById('create-location-form');

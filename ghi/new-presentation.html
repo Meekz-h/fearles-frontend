@@ -10,8 +10,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <title>New Conference :: Conference GO!</title>
-    <script type="module" src="js/new-conference.js"></script>
+    <title>New Presentation :: Conference GO!</title>
+    <script type="module" src="js/new-presentation.js"></script>
   </head>
   <body>
     <header>
@@ -31,17 +31,17 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link " aria-current="page" href="/">Home</a>
+              </li>
+              <li>
+              <a class="nav-link d-none" aria-current="page" href="new-location.html">New Location</a>
+              </li>
+              <li>
+                <a class="nav-link d-none" aria-current="page" href="new-conference.html">New Conference</a>
                 </li>
                 <li>
-                    <a class="nav-link d-none" aria-current="page" href="new-location.html">New Location</a>
-                </li>
-                <li>
-                    <a class="nav-link active " aria-current="page" href="new-conference.html">New Conference</a>
-                </li>
-                <li>
-                    <a class="nav-link" aria-current="page" href="new-presentation.html">New Presentation</a>
+                    <a class="nav-link active" aria-current="page" href="new-presentation.html">New Presentation</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -58,79 +58,51 @@
         <div class="row">
           <div class="offset-3 col-6">
             <div class="shadow p-4 mt-4">
-              <h1>Create a new conference</h1>
-              <form id="create-conference-form">
+              <h1>Create a new presentation</h1>
+              <form id="create-presentation-form">
                 <div class="form-floating mb-3">
                   <input
-                    placeholder="Name"
+                    placeholder="Presenter Name"
                     required
                     type="text"
-                    id="name"
+                    id="presenter_name"
                     class="form-control"
-                    name="name"
+                    name="presenter_name"
                   />
-                  <label for="name">Name</label>
+                  <label for="presenter_name">Presenter Name</label>
                 </div>
                 <div class="form-floating mb-3">
                   <input
-                    placeholder="Starts"
+                    placeholder="presenter_email"
                     required
-                    type="date"
-                    id="starts"
+                    type="email"
+                    id="presenter_email"
                     class="form-control"
-                    name="starts"
+                    name="presenter_email"
                   />
-                  <label for="starts">Starts</label>
+                  <label for="presenter_email">Presenter Email</label>
                 </div>
                 <div class="form-floating mb-3">
                   <input
-                    placeholder="Ends"
+                    placeholder="Company Name"
                     required
-                    type="date"
-                    id="ends"
+                    type="text"
+                    id="company_name"
                     class="form-control"
-                    name = "ends"
+                    name = "company_name"
                   />
-                  <label for="ends">Ends</label>
+                  <label for="company_name">Company Name</label>
                 </div>
                 <div class="mb-3">
-                    <label for="description">Description</label>
-                    <textarea placeholder="Description" class="form-control" id="description" name="description" rows="3" required></textarea>
-
+                    <label for="synopsis">Synopsis</label>
+                    <textarea placeholder="Synopsis" class="form-control" id="synopsis" name="synopsis" rows="3" required></textarea>
                 </div>
-                <div class="form-floating mb-3">
-                    <input
-                    required
-                    class="form-control"
-                    placeholder="Maximum presentations"
-                    type="number"
-                    name="max_presentations"
-                    id="max_presentations"
-                    />
-                    <label for="max_presentations">Maximum presentations</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input
-                      placeholder="Maximum attendees"
-                      required
-                      type="number"
-                      id="max_attendees"
-                      class="form-control"
-                      name = "max_attendees"
-                    />
-                    <label for="max_attendees">Maximum attendees</label>
-                  </div>
                 <div class="mb-3">
-                <select required id="location" class="form-select" name="location">
-                    <option selected value="">Choose a location</option>
-                </select>
+                  <select required id="conference" class="form-select" name="conference">
+                    <option selected value="">Choose a conference</option>
+                  </select>
                 </div>
                 <button class="btn btn-primary">Create</button>
               </form>
             </div>
           </div>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
