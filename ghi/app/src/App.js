@@ -12,8 +12,8 @@ function App(props) {
       <Nav />
       <div className="container">
         <AttendConference/>
-        {/* <ConferenceForm/> */}
-        {/* <LocationForm /> */}
+        {/* <ConferenceForm/>
+        <LocationForm /> */}
         {/* <AttendeeList attendees={props.attendees} /> */}
       </div>
     </>

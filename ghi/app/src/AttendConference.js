@@ -4,7 +4,7 @@ function AttendConference() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [conference, setConference] = useState("");
-  const [success, setSuccess] = useState(0);
+  const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ function AttendConference() {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
-      setSuccess(1);
+      setSuccess(true);
     }
   };
   const handleNameChange = (e) => {

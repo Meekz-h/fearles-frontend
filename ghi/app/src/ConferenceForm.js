@@ -5,7 +5,7 @@ function ConferenceForm() {
     const [starts, setStarts] = useState("");
     const [ends, setEnds] = useState("");
     const [description, setDescription] = useState("");
-    const [maxPresentations, setMaxPresetnations] = useState("");
+    const [maxPresentations, setMaxPresentation] = useState("");
     const [maxAttendees, setMaxAttendees] = useState("");
     const [location, setLocation] = useState("");
 
@@ -22,7 +22,7 @@ function ConferenceForm() {
         setDescription(e.target.value);
     }
     const handleMaxPresentationsChange = (e) => {
-        setMaxPresetnations(e.target.value);
+        setMaxPresentation(e.target.value);
     }
     const handleAttendeesChange = (e) => {
         setMaxAttendees(e.target.value);
@@ -58,7 +58,7 @@ function ConferenceForm() {
             setStarts("");
             setEnds("");
             setMaxAttendees("");
-            setMaxPresetnations("");
+            setMaxPresentation("");
             setLocation("");
         }
 
